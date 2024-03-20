@@ -208,7 +208,7 @@ for epoch in range(0, num_epochs):  # loop over the dataset multiple times
      for step in range(0,trainN,batch_size):
         # get the inputs; data is a list of [inputs, labels]
         indices = np.random.permutation(np.arange(start=step, stop=step+batch_size))
-        input_batch, label_batch = psi_train_input_Tr_torch[indices,:,:,:], psi_train_label_Tr_torch[indices,:,:,:]
+        input_batch, label_batch = psi_train_input_Tr_torch_norm[indices,:,:,:], psi_train_label_Tr_torch_norm[indices,:,:,:]
         print('shape of input', input_batch.shape)
         print('shape of output', label_batch.shape)
 
